@@ -34,8 +34,6 @@ h1{
     text-align: center;
     background-repeat: no-repeat;
     text-decoration: underline;
-    
-    
 }
 
 
@@ -61,7 +59,7 @@ h1{
    
 }
 
-.circles{
+.pallini {
     
     padding: 2px;
     border-radius: 5px;
@@ -72,7 +70,7 @@ h1{
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.circles i{
+.pallini i {
     
     margin: 0px 5px;
     font-size: 15px;
