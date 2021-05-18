@@ -20,48 +20,40 @@ var app = new Vue({
     indiceImmagini: 0,
   },
 
+  // autoplay
   mounted: function(){
     let self = this;
     setInterval(function() {
-    
       self.indiceImmagini++;
-      
       if (self.indiceImmagini == self.immagini.length) {
         self.indiceImmagini = 0;
       }
     }, 3000);
+   
   },
     
-  
-
-
-  
-// funzioni
+  // funzioni
   methods: {
     avanti: function () {
-
+ 
       this.indiceImmagini++;
+  
       console.log(this.indiceImmagini);
 
       if (this.indiceImmagini == this.immagini.length) {
         this.indiceImmagini = 0;
       }
-       
+ 
     },
-  
-    // pallinoCliccato: function(){
-    //   this.indiceImmagini = ;
-    //   console.log(this.indiceImmagini);
-    // },
-
+    
     indietro: function () {
       this.indiceImmagini--;
+       
       if (this.indiceImmagini < 0) {
         this.indiceImmagini = this.immagini.length - 1;
       }
       console.log(this.indiceImmagini);
     },
       
-
   }
 })

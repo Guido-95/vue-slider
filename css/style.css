@@ -4,19 +4,44 @@
     padding: 0;
 }
 
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('https://preview.redd.it/in73r6sbixz31.png?width=4096&format=png&auto=webp&s=810fa4aef8f17b2ccf3ca4c18601eb731904d37e');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#root {
+
+    height: 100vh; 
+}
 
 #wrapper {
-    height: 100vh;
+    
+    
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lightgrey;
-   
+    flex-direction: column;
+ 
+  
+}
+
+h1{
+    position: relative;
+    top: 100px;
+    font-size: 50px;
+    opacity: 70%;
+    text-align: center;
+    background-repeat: no-repeat;
+    text-decoration: underline;
+    
+    
 }
 
 
-
 .slider {
+   
+    margin: auto;
     display:flex ;
     width: 1000px;
     height: 500px;
@@ -25,7 +50,6 @@
 
 .img {
     position: relative;
-    
     width: calc(100% - 100px);
 }
 
@@ -45,6 +69,7 @@
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .circles i{
@@ -66,12 +91,9 @@ i {
 .img img {
     width: 100%;
     height: 100%;
+    opacity: 90%;
     object-fit: contain;
-}
 
-.attivo{
-    color: green;
 }
-
 
 

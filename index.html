@@ -12,8 +12,10 @@
 <body>
     <!-- root vue -->
     <div id="root">
+        
         <!-- contenitore -->
         <div id="wrapper">
+            <h1> E - Sports Slider </h1>
             <!-- slider con frecce e immagini -->
             <div class="slider">
                 <!-- freccia sinistra -->
@@ -28,9 +30,9 @@
                     <div class="circles">
 
                         <i  v-for="immagine,contatore in immagini"
-                        :class = " indiceImmagini == contatore ? 'attivo' : '' "
+                        :class = " indiceImmagini == contatore ? 'fas' : 'far' "
 
-                        class="fas fa-circle"
+                        class="fa-circle"
                         @click = "indiceImmagini = contatore"
                         ></i>
 
