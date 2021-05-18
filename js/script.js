@@ -29,11 +29,11 @@ var app = new Vue({
         self.indiceImmagini = 0;
       }
     }, 3000);
-   
   },
     
   // funzioni
   methods: {
+    // freccia avanti
     avanti: function () {
  
       this.indiceImmagini++;
@@ -46,6 +46,7 @@ var app = new Vue({
  
     },
     
+    // freccia indietro
     indietro: function () {
       this.indiceImmagini--;
        
