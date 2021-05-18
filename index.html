@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>vue slider</title>
+</head>
+<body>
+    <!-- root vue -->
+    <div id="root">
+        <!-- contenitore -->
+        <div id="wrapper">
+            <!-- slider con frecce e immagini -->
+            <div class="slider">
+                <!-- freccia sinistra -->
+                <div class="prev">
+                    <i @click = "indietro" class="fas fa-chevron-left"></i>
+                </div>
+                <!-- freccia sinistra -->
+                <!-- img -->
+                <div class="img">
+                    <img :src="immagini[indiceImmagini]" alt="E-sport">
+                    <!-- pallini -->
+                    <div class="circles">
+
+                        <i  v-for="immagine,contatore in immagini"
+                        :class = " indiceImmagini == contatore ? 'attivo' : '' "
+
+                        class="fas fa-circle"
+                        @click = "indiceImmagini = contatore"
+                        ></i>
+
+                    </div>
+                    <!-- pallini -->
+                </div>
+                <!-- img -->
+                 
+                <div class="next">
+                    <i @click = "avanti" class="fas fa-chevron-right"></i>
+                </div>
+
+            </div>
+            <!-- slider con frecce e immagini -->
+
+        </div>  
+        <!-- contenitore -->
+    </div>
+    <!-- root vue -->
+    
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
