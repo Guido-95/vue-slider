@@ -19,6 +19,20 @@ var app = new Vue({
     ],
     indiceImmagini: 0,
   },
+
+  mounted: function(){
+    setInterval(function() {
+    
+      app.indiceImmagini++;
+      
+      if (app.indiceImmagini == app.immagini.length) {
+        app.indiceImmagini = 0;
+      }
+
+  }, 3000);
+  },
+    
+  
 // funzioni
   methods: {
     avanti: function () {
@@ -30,8 +44,8 @@ var app = new Vue({
         this.indiceImmagini = 0;
       }
        
-    } , 
-
+    },
+  
     // pallinoCliccato: function(){
     //   this.indiceImmagini = ;
     //   console.log(this.indiceImmagini);
@@ -43,6 +57,8 @@ var app = new Vue({
         this.indiceImmagini = this.immagini.length - 1;
       }
       console.log(this.indiceImmagini);
-    }  
+    },
+      
+
   }
 })
