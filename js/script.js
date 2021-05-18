@@ -21,17 +21,20 @@ var app = new Vue({
   },
 
   mounted: function(){
+    let self = this;
     setInterval(function() {
     
-      app.indiceImmagini++;
+      self.indiceImmagini++;
       
-      if (app.indiceImmagini == app.immagini.length) {
-        app.indiceImmagini = 0;
+      if (self.indiceImmagini == self.immagini.length) {
+        self.indiceImmagini = 0;
       }
-
-  }, 3000);
+    }, 3000);
   },
     
+  
+
+
   
 // funzioni
   methods: {
