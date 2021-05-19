@@ -51,8 +51,8 @@ h1{
     width: calc(100% - 100px);
 }
 
-.prev,
-.next {
+.indietro,
+.avanti {
     
     display: flex;
     width: 50px;

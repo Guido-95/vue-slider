@@ -18,12 +18,13 @@ var app = new Vue({
       "https://i.ytimg.com/vi/mP3fGkpmVM0/maxresdefault.jpg"
     ],
     indiceImmagini: 0,
+    autoplay:''
   },
 
   // autoplay
   mounted: function(){
     let self = this;
-    setInterval(function() {
+    this.autoplay = setInterval(function() {
       self.indiceImmagini++;
       if (self.indiceImmagini == self.immagini.length) {
         self.indiceImmagini = 0;
@@ -35,7 +36,7 @@ var app = new Vue({
   methods: {
     // freccia avanti
     avanti: function () {
- 
+      clearInterval(this.autoplay);
       this.indiceImmagini++;
   
       console.log(this.indiceImmagini);
@@ -48,6 +49,7 @@ var app = new Vue({
     
     // freccia indietro
     indietro: function () {
+      clearInterval(this.autoplay);
       this.indiceImmagini--;
        
       if (this.indiceImmagini < 0) {
